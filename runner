@@ -1,0 +1,16 @@
+#!/bin/bash
+case $1 in
+"up")
+  docker compose up
+;;
+"down")
+  docker compose down
+;;
+"reset")
+  docker compose down && \
+  docker compose up
+;;
+*)
+  echo Unexpected command.
+;;
+esac
